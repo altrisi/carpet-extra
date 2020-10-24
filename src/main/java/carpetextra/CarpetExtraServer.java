@@ -34,7 +34,7 @@ public class CarpetExtraServer implements CarpetExtension
         // set-up a snooper to observe how rules are changing in carpet
         CarpetServer.settingsManager.addRuleObserver( (serverCommandSource, currentRuleState, originalUserTest) ->
         {
-            // here we will be snooping for command changes
+            // here we won't be snooping for command changes
         });
     }
 
