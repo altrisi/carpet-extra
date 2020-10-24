@@ -1,11 +1,12 @@
 
-name: Update wiki
-on: push
-#  push:
-#    branches: 
-#      - master
-#    paths:
-#    - "src/main/java/carpet/CarpetSettings.java"
+name: Update Readme
+on:
+  push:
+    branches: 
+      - master
+    paths:
+    - "src/main/java/carpet/CarpetSettings.java"
+    - "README-header.md"
 jobs:
   Rules:
     runs-on: ubuntu-latest
@@ -61,11 +62,6 @@ jobs:
         run: |
           chmod +x gradlew
           ./gradlew runServer > settings-toProccess.txt
-      - name: Checkout wiki
-        uses: actions/checkout@v2
-        with:
-          repository: ${{github.repository}}.wiki
-          path: wiki
       - name: Proccess Gradle log into a pretty readme page
         run: |
           cat README-header.md > wiki/Current-Available-Settings.md
@@ -77,11 +73,12 @@ jobs:
             to2="BUILD SUCCESSFUL"
           fi
           a="$(cat settings-toProccess.txt)";a="$(echo "${a#*"$from1"}")"; echo "${a%%"$to2"*}" >> wiki/Current-Available-Settings.md
-      - name: Commit updated wiki page
+      - name: Commit updated Readme page
         continue-on-error: true
         run: |
           cd wiki
-          git config --global user.name '${{ github.event.pusher.name }}' # Looks better than "github-actions-bot"
+          git add README.md
+          git config --global user.name 'github-actions[bot]' # Looks better than "github-actions-bot"
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git commit -am "Update wiki for '${{ github.event.head_commit.message }}'"
+          git commit -m "Update Readme for '${{ github.event.head_commit.message }}'"
           git push
