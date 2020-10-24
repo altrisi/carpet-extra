@@ -72,9 +72,9 @@ jobs:
           # carpet-extra
           Extra Features for Carpet Mod
 
-          Use along side base [/gnembon/fabric-carpet](fabric-carpet) mod for the same minecraft version.
+          Use along side base [fabric-carpet](/gnembon/fabric-carpet) mod for the same minecraft version.
 
-          Due to how autoCraftingTable feature is implemented, it has been moved to [/gnembon/carpet-autoCraftingTable](a standalone extension).
+          Due to how autoCraftingTable feature is implemented, it has been moved to [a standalone extension](/gnembon/carpet-autoCraftingTable).
           
           # Carpet Extra Features
           " > wiki/Current-Available-Settings.md
