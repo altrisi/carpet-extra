@@ -69,13 +69,13 @@ jobs:
       - name: Proccess Gradle log into a pretty wiki page
         run: |
           from1="# Carpet Mod Settings";
-          a="$(cat settings-toProccess.txt)";
-          if grep -q "Deprecated Gradle features" "$a"; then
+          File=settings-toProccess.txt
+          if grep -q "Deprecated Gradle features" "$File"; then
             to2="Deprecated Gradle features";
           else
             to2="BUILD SUCCESSFUL"
           fi
-          a="$(echo "${a#*"$from1"}")"; echo "${a%%"$to2"*}" > wiki/Current-Available-Settings.md
+          a="$(cat settings-toProccess.txt)";a="$(echo "${a#*"$from1"}")"; echo "${a%%"$to2"*}" > wiki/Current-Available-Settings.md
       - name: Commit updated wiki page
         continue-on-error: true
         run: |
