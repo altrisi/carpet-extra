@@ -1,13 +1,13 @@
 # carpet-extra
 Extra Features for Carpet Mod
 
-Use along side base fabric-carpet mod for the same minecraft version
+Use along side base fabric-carpet mod for the same minecraft version.
 
 Due to how autoCraftingTable feature is implemented, if you are using other mods that require you to use fabric-api (carpet doesn't need it, btw), and you run carpet-extra on a server, the clients must run the same mod configuration as well. If you are only using carpet-style mods, you can connect to the servers with whatever vanilla compatible client you are using.
 
 # Carpet Extra features
 ## accurateBlockPlacement
-Client can provide alternative block placement.  
+Client can provide alternative block placement  
 * Type: `boolean`  
 * Default value: `false`  
 * Required options: `true`, `false`  
@@ -272,5 +272,4 @@ buttons, pressure plates
 * Type: `boolean`  
 * Default value: `false`  
 * Required options: `true`, `false`  
-* Categories: `EXTRAS`, `FEATURE`  
- 
+* Categories: `EXTRAS`, `FEATURE`   
