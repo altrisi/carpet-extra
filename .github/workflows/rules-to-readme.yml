@@ -70,7 +70,7 @@ jobs:
         run: |
           from1="# Carpet Mod Settings";
           a="$(cat settings-toProccess.txt)";
-          if grep -q "Deprecated Gradle features"; then
+          if grep -q "Deprecated Gradle features" "$a"; then
             to2="Deprecated Gradle features";
           else
             to2="BUILD SUCCESSFUL"
