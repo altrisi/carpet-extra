@@ -7,7 +7,7 @@ Due to how autoCraftingTable feature is implemented, if you are using other mods
 
 # Carpet Extra features
 ## accurateBlockPlacement
-Client can provide alternative block placement  
+Client can provide alternative block placement.  
 * Type: `boolean`  
 * Default value: `false`  
 * Required options: `true`, `false`  
