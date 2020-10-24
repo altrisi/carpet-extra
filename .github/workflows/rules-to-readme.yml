@@ -66,8 +66,18 @@ jobs:
         with:
           repository: ${{github.repository}}.wiki
           path: wiki
-      - name: Proccess Gradle log into a pretty wiki page
+      - name: Proccess Gradle log into a pretty readme page
         run: |
+          echo "
+          # carpet-extra
+          Extra Features for Carpet Mod
+
+          Use along side base [/gnembon/fabric-carpet](fabric-carpet) mod for the same minecraft version.
+
+          Due to how autoCraftingTable feature is implemented, it has been moved to [/gnembon/carpet-autoCraftingTable](a standalone extension).
+          
+          # Carpet Extra Features
+          " > wiki/Current-Available-Settings.md
           from1="# Carpet Mod Settings";
           File=settings-toProccess.txt
           if grep -q "Deprecated Gradle features" "$File"; then
