@@ -272,5 +272,5 @@ buttons, pressure plates
 * Type: `boolean`  
 * Default value: `false`  
 * Required options: `true`, `false`  
-* Categories: `EXTRAS`, `FEATURE`   
-
+* Categories: `EXTRAS`, `FEATURE`  
+ 
