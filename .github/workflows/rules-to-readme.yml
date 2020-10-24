@@ -76,7 +76,6 @@ jobs:
       - name: Commit updated Readme page
         continue-on-error: true
         run: |
-          cd wiki
           git add README.md
           git config --global user.name 'github-actions[bot]' # Looks better than "github-actions-bot"
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
