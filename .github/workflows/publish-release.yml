@@ -99,7 +99,6 @@ jobs:
           asset_name: ${{ steps.findjar.outputs.jarname }}
           asset_content_type: application/java-archive
       - name: Upload to Curseforge
-        continue-on-error: true #TODO Remove before PR
         uses: itsmeow/curseforge-upload@v3
         with:
           token: ${{ secrets.CF_API_TOKEN }}
