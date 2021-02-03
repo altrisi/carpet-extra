@@ -10,7 +10,7 @@ public class RulePrinter implements PreLaunchEntrypoint {
     public void onPreLaunch() {
         CarpetExtraServer.noop();
         CarpetServer.onGameStarted();
-        CarpetServer.settingsManager.printAllRulesToLog(\"extras\");
+        CarpetServer.settingsManager.printAllRulesToLog("extras");
         System.exit(0);
     }
 }
