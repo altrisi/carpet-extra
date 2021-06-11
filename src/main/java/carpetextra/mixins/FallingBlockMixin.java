@@ -40,7 +40,7 @@ public abstract class FallingBlockMixin extends Block
     {
         if (CarpetExtraSettings.dragonEggBedrockBreaking && (FallingBlock)(Object)this instanceof DragonEggBlock)
         {
-            if (canFallThrough(serverWorld_1.getBlockState(blockPos_1.down(1))) && blockPos_1.getY() >= server.getOverworld().getBottomY())
+            if (canFallThrough(serverWorld_1.getBlockState(blockPos_1.down(1))) && blockPos_1.getY() >= minecraft_server1.getOverworld().getBottomY())
             {
                 if (!DragonEggBedrockBreaking.fallInstantly &&
                         serverWorld_1.method_37118(blockPos_1))
@@ -61,7 +61,7 @@ public abstract class FallingBlockMixin extends Block
 
                     BlockPos blockPos;
                     
-                    int minY = CarpetExtraSettings.y0DragonEggBedrockBreaking ? server.getOverworld().getBottomY() - 1 : server.getOverworld().getBottomY();
+                    int minY = CarpetExtraSettings.y0DragonEggBedrockBreaking ? minecraft_server1.getOverworld().getBottomY() - 1 : minecraft_server1.getOverworld().getBottomY();
                     
                     for (blockPos = blockPos_1.down(1); canFallThrough(serverWorld_1.getBlockState(blockPos)) && blockPos.getY() > minY; blockPos = blockPos.down(1))
                     {
