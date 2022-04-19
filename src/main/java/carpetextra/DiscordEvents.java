@@ -15,7 +15,7 @@ public class DiscordEvents extends Event
         super(name, reqArgs, isGlobalOnly);
     }
     public void onDiscordMessage(BlockPos pos, ItemStack item) {}
-    public static DiscordEvents DISPENSER_PLAYS_RECORD = new DiscordEvents("dispenser_plays_record", 1, false) {
+    public static DiscordEvents DISPENSER_PLAYS_RECORD = new DiscordEvents("dispenser_plays_record", 2, false) {
         @Override
         public void onDiscordMessage(BlockPos pos, ItemStack item) {
             handler.call(() -> List.of(ValueConversions.of(pos), ValueConversions.of(item)),
