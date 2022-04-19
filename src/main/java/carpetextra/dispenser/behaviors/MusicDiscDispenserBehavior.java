@@ -36,12 +36,12 @@ public class MusicDiscDispenserBehavior extends FallibleItemDispenserBehavior {
             world.syncWorldEvent(1010, frontBlockPos, Item.getRawId(stack.getItem()));
 
             // return item that was in jukebox
+            DiscordEvents.DISPENSER_PLAYS_RECORD.onDiscordMessage(frontBlockPos, stack);
             return jukeboxItem;
         }
 
         // fail to dispense
         this.setSuccess(false);
-        DiscordEvents.DISPENSER_PLAYS_RECORD.onDiscordMessage(frontBlockPos, stack);
         return stack;
     }
 }
