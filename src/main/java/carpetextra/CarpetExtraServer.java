@@ -36,6 +36,7 @@ public class CarpetExtraServer implements CarpetExtension, ModInitializer
         // let's /carpet handle our few simple settings
         CarpetServer.settingsManager.parseSettingsClass(CarpetExtraSettings.class);
         CustomSpawnLists.addExtraSpawnRules();
+        DiscordEvents.noop();
     }
 
     @Override
