@@ -1,5 +1,7 @@
 package carpetextra.dispenser.behaviors;
 
+import carpetextra.DiscordEvents;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -39,6 +41,7 @@ public class MusicDiscDispenserBehavior extends FallibleItemDispenserBehavior {
 
         // fail to dispense
         this.setSuccess(false);
+        DiscordEvents.DISPENSER_PLAYS_RECORD.onDiscordMessage(frontBlockPos, stack);
         return stack;
     }
 }
