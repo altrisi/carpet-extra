@@ -41,4 +41,4 @@ jobs:
       if: always()
       with:
         report_paths: 'build/junit.xml'
-        job_summary: true
+        summary: true
