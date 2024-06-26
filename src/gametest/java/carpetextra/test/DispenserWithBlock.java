@@ -40,7 +40,7 @@ public class DispenserWithBlock {
     @BeforeBatch(batchId = BATCH)
     public void before(ServerWorld world) {
         CarpetExtraSettings.dispensersFillMinecarts = true;
-        CarpetExtraSettings.dispensersCarvePumpkins = true;
+        CarpetExtraSettings.dispensersCarvePumpkins = false;
         CarpetExtraSettings.dispensersStripBlocks = true;
         CarpetExtraSettings.dispensersTillSoil = true;
         CarpetExtraSettings.dispensersUseCauldrons = true;
