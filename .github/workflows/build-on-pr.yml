@@ -41,4 +41,5 @@ jobs:
       if: always()
       with:
         report_paths: 'build/junit.xml'
-        summary: true
+        check_name: Gametest report
+        summary: "Note that most functionality isn't tested by Gametest"
